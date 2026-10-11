@@ -81,7 +81,7 @@ datafinance-portfolio/
 ├── projects.html         Filterable project cards (QuantRisk Analytics featured)
 ├── insights.html         Five educational articles, VaR chart, diversification calculator
 ├── about.html            Biography, skills, education, certifications, interests
-├── contact.html          Email / LinkedIn / GitHub, recruiter and collaborator sections
+├── contact.html          LinkedIn / GitHub, recruiter and collaborator sections
 ├── css/
 │   └── styles.css        Design tokens (both themes) and all components
 ├── js/
