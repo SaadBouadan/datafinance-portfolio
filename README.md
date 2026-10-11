@@ -1,6 +1,8 @@
 # DataFinance Lab
 
-**Turning Financial Data Into Better Decisions.** The personal portfolio of a Financial Data Intelligence student, built to support internship applications in quantitative finance, financial analysis, fintech and data science.
+**Turning Financial Data Into Better Decisions.** The personal portfolio of Saad Bouadan, an MSc student in Financial Data Intelligence at Rennes School of Business, looking for a 6-month end-of-studies internship in risk, quantitative or financial data analysis from late March 2027.
+
+**Live site:** https://saadbouadan.github.io/datafinance-portfolio/
 
 It's a fast, accessible static site with an editorial fintech look: deep navy and mint, serif headlines and data-driven SVG charts. It has no framework, no build step and no backend, so it runs anywhere and deploys free on GitHub Pages.
 
@@ -95,80 +97,16 @@ datafinance-portfolio/
 
 Header and footer markup is repeated in each page on purpose, because it keeps the site build-free. If you change navigation, update all five files.
 
-## Deploy to GitHub Pages
+## Deployment
 
-1. Create a public repository named **`datafinance-portfolio`** on GitHub.
-2. Push the files to it:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial portfolio"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/datafinance-portfolio.git
-   git push -u origin main
-   ```
-3. On GitHub, go to **Settings → Pages**. Under **Build and deployment**, set *Source* to **Deploy from a branch**, then choose branch **`main`** and folder **`/ (root)`**, and click **Save**.
-4. After a minute or so the site is live at `https://<your-username>.github.io/datafinance-portfolio/`.
+The site is served by GitHub Pages from the `main` branch, root folder. Every push to `main` redeploys it within a minute or so at https://saadbouadan.github.io/datafinance-portfolio/.
 
-To use a different repository name, change the `datafinance-portfolio` part of the canonical, `og:url` and `og:image` URLs in each page's `<head>`.
+## Editing content
 
-## Customization guide
-
-### 1. Personal details (required)
-
-Use find-and-replace across all files:
-
-| Find | Replace with |
-| --- | --- |
-| `your-username` | Your GitHub username (fixes GitHub links, repository links and the canonical, `og:url` and `og:image` URLs) |
-| `your-profile` | Your LinkedIn profile slug |
-| `your.email@example.com` | Your email address |
-
-Then search for `class="ph"`. Every match is a highlighted placeholder, such as your name, university, graduation date, location, languages, coursework, certifications and availability. Replace the text, then remove the `class="ph"` wrapper so the dashed highlight disappears. When `node scripts/check-site.mjs` stops reporting placeholders, you're done.
-
-### 2. Verify the content about you
-
-- **QuantRisk Analytics**, in `index.html` and `projects.html`, was written from the project name only. Make its description, focus areas and technology tags match your repository.
-- **Skills**, in `about.html` and on the home page: keep only skills you can discuss confidently in an interview.
-- **Interests** and the **biography** in `about.html`: adjust them to your own voice.
-- **Certifications**: duplicate the entry for each one you hold, or delete the panel if you have none yet.
-
-### 3. Replace the example projects
-
-Cards with an **Example** badge are outlines, not completed work. To replace one, change its title, text and tags. Then swap the `card-note` line for a real link:
-
-```html
-<div class="card-foot"><a class="link-arrow" href="https://github.com/your-username/repo">View repository ↗</a></div>
-```
-
-Also remove the `<span class="badge badge-example">Example</span>` badge. If none are left, delete the "Note" callout at the top of `projects.html` as well.
-
-**Filter categories** come from `data-category`, a space-separated list of `finance`, `data-science`, `machine-learning` and `web-development`. The project count updates automatically.
-
-### 4. Add an article
-
-In `insights.html`:
-1. Copy an `<article class="article" id="...">` block and give it a new, unique `id`.
-2. Add a matching card in the "All insights" grid that links to `#your-id`.
-3. Keep examples hypothetical and avoid recommendations.
-
-### 5. Look and feel
-
-- **Colors** are CSS custom properties at the top of `css/styles.css`: `:root` for dark, `[data-theme="light"]` for light.
-- **Default theme**: the inline `<script>` in each page's `<head>` follows the system setting. To always start in dark mode, replace `(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark')` with `'dark'` in all five pages.
-- **Fonts**: change the Google Fonts `<link>` and the `--font-*` variables.
-- **Social image**: replace `assets/og-image.png` with any 1200×630 PNG.
-
-## Screenshots
-
-Add screenshots to this README so visitors to the repository see the design at a glance:
-
-1. Run the site locally, as described above.
-2. Capture the home page at a desktop width of about 1440 px, in both light and dark themes. Also capture one phone-width view of about 390 px. In Chrome DevTools, open the device toolbar (Ctrl/Cmd+Shift+M), then use **⋮ → Capture screenshot** or **Capture full size screenshot**.
-3. Save them in a `docs/` folder, for example `docs/home-dark.png`, and reference them here:
-   ```markdown
-   ![Home page, dark theme](docs/home-dark.png)
-   ```
+- **Projects** live in `projects.html` (all cards) and `index.html` (three selected cards). Filter categories come from each card's `data-category` attribute: `finance`, `data-science`, `machine-learning` and `web-development`.
+- **Articles** live in `insights.html`. To add one, copy an `<article class="article" id="...">` block with a new `id` and add a matching card in the "All insights" grid. Keep examples hypothetical and avoid recommendations.
+- **Colours** are CSS custom properties at the top of `css/styles.css`: `:root` for dark, `[data-theme="light"]` for light.
+- Header and footer markup is repeated in all five pages, so update every file when navigation changes. Run `node scripts/check-site.mjs` after editing.
 
 ## Content disclaimer
 
@@ -176,4 +114,4 @@ The articles on this site are educational. They are not financial, investment, t
 
 ## License
 
-Released under the [MIT License](LICENSE). Article text and personal content remain © their author. Update the name in `LICENSE`.
+Released under the [MIT License](LICENSE). Article text and personal content remain © their author.

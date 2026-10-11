@@ -57,8 +57,7 @@
       <div class="container">
         <span class="eyebrow">Projects</span>
         <h1 id="page-title">Work at the intersection of <em>finance and data</em></h1>
-        <p class="lead">Risk analytics, portfolio construction, machine learning and the web tools that present them. Filter by area below.</p>
-        <p class="callout"><strong>Note:</strong> <span>Cards marked <em>Example</em> are outlines of projects I plan to build, not completed work.</span></p>
+        <p class="lead">Risk analytics, machine learning on financial data and the web tools that explain them. Every project links to its code or live site. Filter by area below.</p>
       </div>
     </section>
 
@@ -77,20 +76,35 @@
         </div>
 
         <div class="card-grid">
-          <!-- Verify: written from the project name only. Match the description, focus areas and stack to your repository. -->
           <article class="card card-featured" data-category="finance data-science">
             <div>
               <div class="card-meta"><span class="badge badge-featured">Featured</span><span class="card-kicker">Finance · Data science</span></div>
               <h3>QuantRisk Analytics</h3>
-              <p>A quantitative risk analytics project that measures and visualizes portfolio risk. It turns raw market data into the metrics a risk team relies on, so that exposure can be understood, compared and communicated clearly.</p>
-              <ul class="tags" aria-label="Technologies"><li class="tag">Python</li><li class="tag">Risk metrics</li><li class="tag">Data visualization</li></ul>
+              <p>Takes a set of assets and weights, builds the portfolio under an explicit rebalancing rule (five to choose from) and measures its performance and risk against a benchmark. Every number comes from a small, unit-tested function, and an interactive Streamlit dashboard displays the results.</p>
+              <ul class="tags" aria-label="Technologies"><li class="tag">Python</li><li class="tag">pandas</li><li class="tag">NumPy</li><li class="tag">Streamlit</li><li class="tag">pytest</li><li class="tag">GitHub Actions</li></ul>
             </div>
             <ul class="feature-list" aria-label="Focus areas">
-              <li><span>σ</span>Volatility and return analysis</li>
-              <li><span>MDD</span>Drawdown measurement</li>
-              <li><span>VaR</span>Value at Risk estimation</li>
+              <li><span>VaR</span>Historical VaR and Expected Shortfall, with an out-of-sample Kupiec backtest</li>
+              <li><span>MDD</span>Drawdowns, Sharpe, tracking error, information ratio, beta and Euler risk contributions</li>
+              <li><span>163</span>Unit tests against hand-calculated values, run in CI on every push</li>
             </ul>
             <div class="card-foot"><a class="link-arrow" href="https://github.com/SaadBouadan/quant-risk-analytics">View repository ↗</a><span class="mono muted">Featured project</span></div>
+          </article>
+
+          <article class="card" data-category="machine-learning data-science finance">
+            <div class="card-meta"><span class="card-kicker">Machine learning · Fraud</span></div>
+            <h3>Financial Fraud Detection</h3>
+            <p>A two-person MSc project on 6.36M synthetic payment transactions from Kaggle. Fraud appears only in transfers (0.77%) and cash-outs (0.18%), a dependence confirmed by a chi-square test. On the fraudulent transactions, a Random Forest separates the two types with 99.2% accuracy, against 98.2% for logistic regression.</p>
+            <ul class="tags" aria-label="Technologies"><li class="tag">Python</li><li class="tag">pandas</li><li class="tag">scikit-learn</li><li class="tag">SciPy</li></ul>
+            <div class="card-foot"><a class="link-arrow" href="https://github.com/SaadBouadan/Financial-Fraud-Detection-Using-Machine-Learning">View repository ↗</a></div>
+          </article>
+
+          <article class="card" data-category="finance web-development">
+            <div class="card-meta"><span class="card-kicker">Finance · Web</span></div>
+            <h3>Sigma Field Notes</h3>
+            <p>An interactive primer on volatility for quant-finance students: Monte Carlo price paths, the √T rule, a scroll-driven 3D implied volatility surface, a live Black–Scholes pricer with Greeks and an implied-vol solver, and VaR vs Expected Shortfall under fat tails.</p>
+            <ul class="tags" aria-label="Technologies"><li class="tag">JavaScript</li><li class="tag">Three.js</li><li class="tag">WebGL</li></ul>
+            <div class="card-foot"><a class="link-arrow" href="https://saadbouadan.github.io/sigma-field-notes/">Open live site ↗</a><a class="link-arrow" href="https://github.com/SaadBouadan/sigma-field-notes">Code ↗</a></div>
           </article>
 
           <article class="card" data-category="web-development">
@@ -99,38 +113,6 @@
             <p>This website: a fast, accessible static portfolio with simulation-generated SVG charts, an interactive diversification demo, project filters and a light/dark theme, with no framework or build step.</p>
             <ul class="tags" aria-label="Technologies"><li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JavaScript</li><li class="tag">SVG</li></ul>
             <div class="card-foot"><a class="link-arrow" href="https://github.com/SaadBouadan/datafinance-portfolio">View repository ↗</a></div>
-          </article>
-
-          <article class="card" data-category="finance data-science">
-            <div class="card-meta"><span class="badge badge-example">Example</span><span class="card-kicker">Finance · Data science</span></div>
-            <h3>Portfolio Optimizer</h3>
-            <p>Mean–variance optimization of a multi-asset portfolio: estimate expected returns and covariances, trace the efficient frontier, and compare the optimal mix with an equal-weight benchmark out of sample.</p>
-            <ul class="tags" aria-label="Technologies"><li class="tag">Python</li><li class="tag">NumPy</li><li class="tag">SciPy</li></ul>
-            <div class="card-foot"><span class="card-note">Example project · no repository yet</span></div>
-          </article>
-
-          <article class="card" data-category="machine-learning data-science finance">
-            <div class="card-meta"><span class="badge badge-example">Example</span><span class="card-kicker">Machine learning · Credit</span></div>
-            <h3>Credit Default Classifier</h3>
-            <p>Estimate the probability that a loan defaults using logistic regression and gradient boosting, evaluate with ROC-AUC and calibration curves, and explain each prediction’s main drivers.</p>
-            <ul class="tags" aria-label="Technologies"><li class="tag">Python</li><li class="tag">scikit-learn</li><li class="tag">pandas</li></ul>
-            <div class="card-foot"><span class="card-note">Example project · no repository yet</span></div>
-          </article>
-
-          <article class="card" data-category="machine-learning data-science">
-            <div class="card-meta"><span class="badge badge-example">Example</span><span class="card-kicker">Machine learning · NLP</span></div>
-            <h3>Financial News Sentiment</h3>
-            <p>Score financial headlines with a pre-trained language model, aggregate sentiment by company and day, and test whether it carries any information about next-day returns.</p>
-            <ul class="tags" aria-label="Technologies"><li class="tag">Python</li><li class="tag">Transformers</li><li class="tag">pandas</li></ul>
-            <div class="card-foot"><span class="card-note">Example project · no repository yet</span></div>
-          </article>
-
-          <article class="card" data-category="web-development finance">
-            <div class="card-meta"><span class="badge badge-example">Example</span><span class="card-kicker">Web development · Markets</span></div>
-            <h3>Market Risk Dashboard</h3>
-            <p>A browser dashboard that loads historical prices from CSV and charts returns, rolling volatility and drawdowns, built to run entirely client-side on GitHub Pages.</p>
-            <ul class="tags" aria-label="Technologies"><li class="tag">JavaScript</li><li class="tag">Chart.js</li><li class="tag">CSV</li></ul>
-            <div class="card-foot"><span class="card-note">Example project · no repository yet</span></div>
           </article>
         </div>
       </div>
@@ -174,13 +156,13 @@
         <p class="footer-title">Elsewhere</p>
         <ul class="footer-links">
           <li><a href="https://github.com/SaadBouadan">GitHub ↗</a></li>
-          <li><a href="https://www.linkedin.com/in/your-profile">LinkedIn ↗</a></li>
-          <li><a href="mailto:your.email@example.com">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/saad-bouadan-4695b7383/">LinkedIn ↗</a></li>
+          <li><a href="mailto:saadbouadan98@gmail.com">Email</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer-base">
-      <span>© 2026 <span class="ph">Your Name</span> · DataFinance Lab</span>
+      <span>© 2026 Saad Bouadan · DataFinance Lab</span>
       <span>HTML · CSS · vanilla JS · GitHub Pages</span>
     </div>
   </footer>
